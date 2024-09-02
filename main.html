@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEXBASE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light pastel blue */
+        }
+        header {
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #ffb6c1; /* Light pastel pink */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4682b4; /* Light pastel blue */
+            font-size: 1.2em;
+        }
+        .subnav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .subnav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4682b4; /* Light pastel blue */
+            font-size: 1em;
+        }
+        .subsubnav {
+            display: none;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .subsubnav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4682b4; /* Light pastel blue */
+            font-size: 1em;
+        }
+        .blog-entry {
+            display: none;
+            margin: 20px;
+            font-size: 1.1em;
+            color: #696969; /* Dim gray */
+        }
+        .blog-entry img {
+            max-width: 100%;
+            height: auto;
+        }
+        #august-entry {
+            display: block;
+        }
+        #no-report {
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            color: #696969; /* Dim gray */
+        }
+    </style>
+</head>
+<body>
+    <header>HEXBASE</header>
+    <nav>
+        <a href="#" id="quarter">Quarter</a>
+        <a href="#" id="month">Month</a>
+    </nav>
+    <div class="subnav" id="month-subnav">
+        <a href="#" id="august">August</a>
+        <a href="#">September</a>
+        <a href="#">October</a>
+        <a href="#">November</a>
+        <a href="#">December</a>
+    </div>
+    <div class="blog-entry" id="august-entry">
+        <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
+            <li><a href="#staking" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Staking</a></li>
+            <li><a href="#penalties" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Penalties</a></li>
+        </ul>
+        <h3 id="staking" style="color: #ffb6c1;">Staking</h3>
+        <p>🆙🆙🆙 Good Morning, World! #HEX metrics are up, up, and up! The price is not up yet, but keep your fingers crossed. Here is the $HEX monthly report for Staking for August:</p>
+        <p>More $pHEX and $eHEX staking resulted in a total of 4,711 new stakes. This matches the staking counts seen in April for pHEX and in March for eHEX.</p>
+        <p><img src="august/count.png" alt="Staking Counts"></p>
+        <p>Not only are the staking counts up, but more HEX was staked on #Pulsechain as well as on #Ethereum. In total, 11.2 billion HEX was staked.</p>
+        <p><img src="august/principal.png" alt="Principal Staked"></p>
+        <p>And if that wasn't enough, the length of those wonderful stakes in August went looooooong—the longest within a year. We haven't seen this level of conviction for a long time. The average staking length was 1,600 days for pHEX and 1,400 days for eHEX.</p>
+        <p><img src="august/length.png" alt="Average Staking Length"></p>
+        <p>Even the average principal staked increased to 4.3 million eHEX per stake and 2 million pHEX per stake. Stay tuned for the next update on growing HEX metrics in the coming days! 😎</p>
+        <p><img src="august/avg_stake.png" alt="HEX Metrics"></p>
+
+        <h3 id="penalties" style="color: #ffb6c1;">Penalties</h3>
+        <p>❓Who's gonna quit #HEX? Apparently nobody. The penalties in the $HEX staking system remained stable in August. This is Part 2 of the HEX monthly report.</p>
+        <p>After this year's surge of big whales quitting their staking positions and taking massive penalties, we've seen a big reduction since March. This suggests that no significant players are exiting HEX anymore, even though we still observe larger sellers in $PLS and $PLSX that drags the HEX price with it. In August, the total penalties remained around 90 million HEX, split evenly between $eHEX and $pHEX.</p>
+        <p><img src="august/penalties.png" alt="Total Penalties"></p>
+        <p>The most notable observation in August was that Late Stake penalties increased even further on $eHEX, with 1,277 late stakes. This is understandable, given that fees on #Ethereum have become very affordable. However, this number is still relatively low.</p>
+        <p><img src="august/late_stakes.png" alt="Late Stake Penalties"></p>
+        <p>On the other hand, Emergency End Stake penalties continued to decrease for pHEX, and the $eHEX numbers are not significantly higher either.</p>
+        <p><img src="august/emergency_end_stake.png" alt="Emergency End Stake Penalties"></p>
+        <p>The ratio of Emergency End Stakers (EEStakers) to Active Stakers is 0.1% for pHEX and 0.07% for eHEX. The eHEX ratio has begun to approach the pHEX ratio, again due to lower fees on #Ethereum.</p>
+        <p><img src="august/eestakers_ratio.png" alt="EEStakers to Active Stakers Ratio"></p>
+
+    </div>
+    <div id="no-report">No report uploaded yet. Stay tuned!</div>
+    <script>
+        document.getElementById('month').addEventListener('click', function() {
+            document.getElementById('month-subnav').style.display = 'flex';
+        });
+
+        document.getElementById('august').addEventListener('click', function() {
+            document.getElementById('august-entry').style.display = 'block';
+            document.getElementById('no-report').style.display = 'none';
+        });
+
+        document.getElementById('august').addEventListener('click', function() {
+            document.getElementById('august-entry').style.display = 'block';
+            document.getElementById('no-report').style.display = 'none';
+        });
+
+        document.querySelectorAll('.subnav a:not(#august)').forEach(function(element) {
+            element.addEventListener('click', function() {
+                document.getElementById('august-entry').style.display = 'none';
+                document.getElementById('no-report').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
