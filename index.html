@@ -20,34 +20,37 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            position: relative;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #4682b4; /* Light pastel blue */
             font-size: 1.2em;
+            position: relative;
         }
-        .subnav {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
+        nav a:hover {
+            background-color: #ffb6c1; /* Light rosa */
         }
-        .subnav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #4682b4; /* Light pastel blue */
-            font-size: 1em;
-        }
-        .subsubnav {
+        .dropdown-content {
             display: none;
-            justify-content: center;
-            margin-top: 10px;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
-        .subsubnav a {
-            margin: 0 10px;
-            text-decoration: none;
+        .dropdown-content a {
             color: #4682b4; /* Light pastel blue */
-            font-size: 1em;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ffb6c1; /* Light rosa */
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .blog-entry {
             display: none;
@@ -63,7 +66,7 @@
             display: block;
         }
         #no-report {
-            display: block;
+            display: none;
             text-align: center;
             font-size: 1.2em;
             color: #696969; /* Dim gray */
@@ -73,20 +76,31 @@
 <body>
     <header>HEXBASE</header>
     <nav>
-        <a href="#" id="quarter">Quarter</a>
-        <a href="#" id="month">Month</a>
+        <div class="dropdown">
+            <a href="#" id="quarter">Quarter</a>
+            <div class="dropdown-content" id="quarter-subnav">
+                <a href="#" class="quarter-option">Q1</a>
+                <a href="#" class="quarter-option">Q2</a>
+                <a href="#" class="quarter-option">Q3</a>
+                <a href="#" class="quarter-option">Q4</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="month">Month</a>
+            <div class="dropdown-content" id="month-subnav">
+                <a href="#" id="august">August</a>
+                <a href="#" class="other-month">September</a>
+                <a href="#" class="other-month">October</a>
+                <a href="#" class="other-month">November</a>
+                <a href="#" class="other-month">December</a>
+            </div>
+        </div>
     </nav>
-    <div class="subnav" id="month-subnav">
-        <a href="#" id="august">August</a>
-        <a href="#">September</a>
-        <a href="#">October</a>
-        <a href="#">November</a>
-        <a href="#">December</a>
-    </div>
     <div class="blog-entry" id="august-entry">
         <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
             <li><a href="#staking" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Staking</a></li>
             <li><a href="#penalties" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Penalties</a></li>
+            <li><a href="#adoption" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Adoption</a></li>
         </ul>
         <h3 id="staking" style="color: #ffb6c1;">Staking</h3>
         <p>🆙🆙🆙 Good Morning, World! #HEX metrics are up, up, and up! The price is not up yet, but keep your fingers crossed. Here is the $HEX monthly report for Staking for August:</p>
@@ -110,6 +124,16 @@
         <p>The ratio of Emergency End Stakers (EEStakers) to Active Stakers is 0.1% for pHEX and 0.07% for eHEX. The eHEX ratio has begun to approach the pHEX ratio, again due to lower fees on #Ethereum.</p>
         <p><img src="august/eestakers_ratio.png" alt="EEStakers to Active Stakers Ratio"></p>
 
+        <h3 id="adoption" style="color: #ffb6c1;">Adoption</h3>
+        <p>50%⬆️There were 50% more new users for #HEX in August than in July. Adoption has stabilized! This is Part 3 of the $HEX monthly report.</p>
+        <p>At the end of summer, we have seen 3.2k new users in HEX, similar to the beginning of summer in May. While adoption has slowed down, we are stable, as shown in the following charts.</p>
+        <p><img src="august/new_users.png" alt="New Users"></p>
+        <p>June, July, and August had a similar number of total active users, over 17k, with a slight recent increase.</p>
+        <p><img src="august/active_users.png" alt="Active Users"></p>
+        <p>A similar trend is observed for active $eHEX and $pHEX users, with around 15k for pHEX and 4k for eHEX.</p>
+        <p><img src="august/active_ehex_phex_users.png" alt="Active eHEX and pHEX Users"></p>
+        <p>The number of active stakers remains the same; no new stakers have joined, but no one has left either. It appears that staking adoption has flattened, although it is still higher than one year ago. We peaked at 131.2k in March and have remained consistently at 131.1k in total.</p>
+        <p><img src="august/active_stakers.png" alt="Active Stakers"></p>
     </div>
     <div id="no-report">No report uploaded yet. Stay tuned!</div>
     <script>
@@ -122,12 +146,14 @@
             document.getElementById('no-report').style.display = 'none';
         });
 
-        document.getElementById('august').addEventListener('click', function() {
-            document.getElementById('august-entry').style.display = 'block';
-            document.getElementById('no-report').style.display = 'none';
+        document.querySelectorAll('.other-month').forEach(function(element) {
+            element.addEventListener('click', function() {
+                document.getElementById('august-entry').style.display = 'none';
+                document.getElementById('no-report').style.display = 'block';
+            });
         });
 
-        document.querySelectorAll('.subnav a:not(#august)').forEach(function(element) {
+        document.querySelectorAll('.quarter-option').forEach(function(element) {
             element.addEventListener('click', function() {
                 document.getElementById('august-entry').style.display = 'none';
                 document.getElementById('no-report').style.display = 'block';
