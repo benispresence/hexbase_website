@@ -101,6 +101,7 @@
             <li><a href="#staking" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Staking</a></li>
             <li><a href="#penalties" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Penalties</a></li>
             <li><a href="#adoption" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Adoption</a></li>
+            <li><a href="#staking-ratios" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1.2em;">Staking Ratios</a></li>
         </ul>
         <h3 id="staking" style="color: #ffb6c1;">Staking</h3>
         <p>🆙🆙🆙 Good Morning, World! #HEX metrics are up, up, and up! The price is not up yet, but keep your fingers crossed. Here is the $HEX monthly report for Staking for August:</p>
@@ -134,6 +135,13 @@
         <p><img src="august/active_ehex_phex_users.png" alt="Active eHEX and pHEX Users"></p>
         <p>The number of active stakers remains the same; no new stakers have joined, but no one has left either. It appears that staking adoption has flattened, although it is still higher than one year ago. We peaked at 131.2k in March and have remained consistently at 131.1k in total.</p>
         <p><img src="august/active_stakers.png" alt="Active Stakers"></p>
+
+        <h3 id="staking-ratios" style="color: #ffb6c1;">Staking Ratios</h3>
+        <p>🌊$500k+ was net staked into #HEX in August. Is the tide turning? Let's explore this in Part 4 of the HEX monthly report, focusing on staking ratios.</p>
+        <p>We recently reported on the net flow of $ value into staking $HEX, but August had not yet concluded. In the second half of August, the net flow turned positive, breaking the pattern of net outflows seen in previous months. We are positive again with $500k+ for the first time since February, even though the average combined price continues to decline to $0.0059. Is trust returning to HEX staking?</p>
+        <p><img src="august/net_flow.png" alt="Net Flow"></p>
+        <p>Most of the staking was done in $pHEX, as discussed in the previous parts of the report. The starting vs. ending staking ratios reveal that while $eHEX is struggling to improve its ratio, the pHEX ratio is trending towards 1, having risen to 0.78. This suggests that the renewed staking appetite is primarily driven by pHEX, and most of the inflows can be attributed to pHEX.</p>
+        <p><img src="august/staking_ratios.png" alt="Staking Ratios"></p>
     </div>
     <div id="no-report">No report uploaded yet. Stay tuned!</div>
     <script>
@@ -157,6 +165,12 @@
             element.addEventListener('click', function() {
                 document.getElementById('august-entry').style.display = 'none';
                 document.getElementById('no-report').style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.dropdown-content a').forEach(function(element) {
+            element.addEventListener('click', function() {
+                this.parentElement.style.display = 'none';
             });
         });
     </script>
