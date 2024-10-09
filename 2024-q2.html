@@ -161,7 +161,13 @@
 
         document.querySelectorAll('.other-month').forEach(function(element) {
             element.addEventListener('click', function() {
-                alert('No report uploaded yet for this month. Stay tuned!');
+                if (this.textContent === 'August') {
+                    window.location.href = '2024-august.html';
+                } else if (this.textContent === 'September') {
+                    window.location.href = '2024-september.html';
+                } else {
+                    alert('No report uploaded yet for this month. Stay tuned!');
+                }
             });
         });
 
