@@ -96,7 +96,7 @@
         </div>
     </nav>
     <div class="blog-entry" id="august-entry">
-        <h2 style="text-align: center; color: #ffb6c1;">August Report</h2>
+        <h2 style="text-align: center; color: #ffb6c1;">August 2024 Report</h2>
         <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
             <li style="flex: 1 1 auto; text-align: center;"><a href="#staking" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Staking</a></li>
             <li style="flex: 1 1 auto; text-align: center;"><a href="#penalties" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Penalties</a></li>
@@ -212,14 +212,18 @@
         });
 
         document.getElementById('august').addEventListener('click', function() {
-            document.getElementById('august-entry').style.display = 'block';
-            document.getElementById('no-report').style.display = 'none';
+            window.location.href = '2024-august.html';
         });
 
         document.querySelectorAll('.other-month').forEach(function(element) {
             element.addEventListener('click', function() {
-                document.getElementById('august-entry').style.display = 'none';
-                document.getElementById('no-report').style.display = 'block';
+                if (this.textContent === 'August') {
+                    window.location.href = '2024-august.html';
+                } if (this.textContent === 'September') {
+                    window.location.href = '2024-september.html';
+                } else {
+                    alert('No report uploaded yet for this month. Stay tuned!');
+                }
             });
         });
 
