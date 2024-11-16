@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 2024 Report - HEXBASE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #696969;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #ffb6c1;
+        }
+        h1, h2, h3 {
+            color: #ffb6c1;
+        }
+        h1 {
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4682b4;
+            font-size: 1.2em;
+            position: relative;
+        }
+        nav a:hover {
+            background-color: #ffb6c1;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #4682b4;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ffb6c1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        li {
+            flex: 1 1 auto;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #4682b4;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>HEXBASE</header>
+    <nav>
+        <div class="dropdown">
+            <a href="#" id="quarter">Quarter</a>
+            <div class="dropdown-content" id="quarter-subnav">
+                <a href="#" class="quarter-option">Q2</a>
+                <a href="#" class="quarter-option">Q3</a>
+                <a href="#" class="quarter-option">Q4</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="month">Month</a>
+            <div class="dropdown-content" id="month-subnav">
+                <a href="#" class="other-month">August</a>
+                <a href="#" class="other-month">September</a>
+                <a href="#" class="other-month">October</a>
+                <a href="#" class="other-month">November</a>
+                <a href="#" class="other-month">December</a>
+            </div>
+        </div>
+    </nav>
+
+    <h2 style="text-align: center; color: #ffb6c1;">Q3 2024 Report</h2>
+    <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <li style="flex: 1 1 auto; text-align: center;"><a href="#staking" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Staking</a></li>
+        <li style="flex: 1 1 auto; text-align: center;"><a href="#adoption" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Adoption</a></li>
+        <li style="flex: 1 1 auto; text-align: center;"><a href="#yield" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Yield</a></li>
+        <li style="flex: 1 1 auto; text-align: center;"><a href="#penalties" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Penalties</a></li>
+        <li style="flex: 1 1 auto; text-align: center;"><a href="#usage" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Usage</a></li>
+        <li style="flex: 1 1 auto; text-align: center;"><a href="#supply" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">Supply</a></li>
+        <li style="flex: 1 1 auto; text-align: center;"><a href="#5555" style="text-decoration: none; color: #4682b4; font-weight: bold; font-size: 1em;">5555</a></li>
+    </ul>
+
+    <!-- Report Sections -->
+    <h3 id="staking" style="color: #ffb6c1;">Staking</h3>
+    <p>⚡️For the first time in two years, #HEX saw more stakes started than in the previous quarter. Is this the start of a trend? This is Part 1 of the #HEX quarterly report.</p>
+
+    <p>In Q3, 83% of the stakes were pHEX, while 17% were eHEX. As mentioned, staking may have just recovered from its all-time low of 13.7k stakes in Q2.</p>
+
+    <p><img src="quarter/2024/q3/count.png" alt="Staking Counts"></p>
+
+    <p>Although the number of stakes increased, the total staked amount dropped compared to the previous quarter, reaching 32B—still 7B more than in Q3 of last year. The ratio here is 70% pHEX and 30% eHEX.</p>
+
+    <p><img src="quarter/2024/q3/principal.png" alt="Principal Staked"></p>
+
+    <p>The average amount of HEX staked remains impressive, with an average of 4M HEX staked on Ethereum and 1.8M HEX staked on Pulsechain.</p>
+
+    <p><img src="quarter/2024/q3/length.png" alt="Average Staking Length"></p>
+
+    <p>The average staking length hasn’t changed since the last quarter. Median is still at an all-time low.</p>
+
+    <p><img src="quarter/2024/q3/avg_stake.png" alt="HEX Metrics"></p>
+
+    <!-- New Content Added Below -->
+    <p>❤️🩹Further improvements in the #HEX staking stats are evident in the Net Flow and Staking Ratio charts.</p>
+
+    <p>In Q3, -$10 million flowed out of HEX staking, which includes both eHEX and pHEX. It's encouraging to see that the overall trend in quarterly net flow continues to improve. Compared to the -$855 million outflow in Q4 2021, this is minimal and close to turning positive. It's also much lower than the outflow in Q2 this year.</p>
+
+    <p><img src="quarter/2024/q3/net_flow_q3.png" alt="Net Flow Q3"></p>
+
+    <p>The staking ratio increased finally in Q3, with pHEX improving from 0.7 to 0.72 and eHEX showing even stronger growth, rising from 0.23 to 0.29. A ratio of 1 would indicate that the number of new stakes matches those that ended.</p>
+
+    <p><img src="quarter/2024/q3/start_end_ratio.png" alt="Staking Start-to-End Ratio"></p>
+
+    <h3 id="adoption" style="color: #ffb6c1;">Adoption</h3>
+    <p>Adoption levels for #HEX stagnated in Q3, but they did not decline further. (Part 3 - Adoption)</p>
+
+    <p>A total of 9.3k new users tried out #HEX across both Ethereum and Pulsechain, similar to the numbers seen before BPD and the 2021 run-up.</p>
+    <p><img src="quarter/2024/q3/adoption_new_users.png" alt="New Users"></p>
+
+    <p>There were 38k active users in HEX, comparable to the quarter of BPD. Of these, 32k addresses were active in pHEX, and 12k were active in eHEX. This represents little change compared to the previous quarter.</p>
+    <p><img src="quarter/2024/q3/adoption_active_users.png" alt="Active Users"></p>
+    <p><img src="quarter/2024/q3/variants.png" alt="Active Variant Users"></p>
+
+    <p>We can observe stagnation in the overall number of active #HEX stakers. Interestingly, the combined number of active stakers increased by approximately +200 from Q2 to Q3, while active pHEX and eHEX stakers declined slightly. This suggests that some stakers decide to quit one chain while continuing with the other, or choose to stake on only one side. Specifically, pHEX declined by around -400 active stakers, and eHEX declined by about -1,000 active stakers.</p>
+    <p><img src="quarter/2024/q3/phex_growth.png" alt="pHEX Growth"></p>
+
+    <p>Native user growth continues, although staking does not appear to be a focus for them. pHEX is experiencing significantly higher growth in native users than eHEX. In total, we have reached 455k HEX users, 416k pHEX users, and 394k native users.</p>
+    <p><img src="quarter/2024/q3/adoption_total_users.png" alt="Total HEX Users"></p>
+
+    <h3 id="usage" style="color: #ffb6c1;">Usage</h3>
+    
+    <p>📊 Stable Usage in #HEX Q3 - Part 7 of the Quarterly Report</p>
+
+    <p>We saw 518k transactions in Q3, a level similar to last quarter and comparable to the volume when HEX peaked in 2021. Of these, only 42k transactions were native eHEX transactions.</p>
+
+    <p><img src="quarter/2024/q3/transactions.png" alt="Q3 Transactions"></p>
+
+    <p>Examining these 42k eHEX transactions, we observed an increase in the staking share to 26% of all transactions, up from 23% in Q2 and 13% in Q1. Staking activity looks quite healthy. Many End Stakes recently of course.</p>
+
+    <p>More stats on usage in the next quarterly report. For now I haven't setup all of the charts from the monthly report.</p>
+
+    <p><img src="quarter/2024/q3/staking_share.png" alt="Staking Share"></p>
+
+    <h3 id="supply" style="color: #ffb6c1;">Supply</h3>
+    
+    <p>📈 The user circulating supply for #HEX increased in Q3. Where does it stop? Part 8 - Supply</p>
+
+    <p>The user circulating supply for pHEX was estimated at 25.3 billion, an increase of 1.6 billion. However, eHEX saw an even greater increase, reaching 34 billion in user circulating supply last quarter.</p>
+
+    <p><img src="quarter/2024/q3/circulating_supply.png" alt="Circulating Supply Q3"></p>
+
+    <p>These increases led to a stabilization of the user market cap in Q3 while having lower prices, now valued at $193 million. Within this, eHEX maintained a user market cap of $50 million.</p>
+
+    <p><img src="quarter/2024/q3/market_cap.png" alt="Market Cap Q3"></p>
+
+    <p>Due to the substantial increase in eHEX's user circulating supply, the share of the OA in the circulating supply dropped below 95% to 94.35%, while pHEX stands at 95.7%.</p>
+
+    <p><img src="quarter/2024/q3/oa_share.png" alt="OA Share"></p>
+
+    <p>Do you think we'll observe a slowdown or even a reversal in Q4? October data is almost ready, but I'm currently facing some Ethereum node issues, which should be resolved soon, though they temporarily limit insights.</p>
+
+    <h3 id="yield" style="color: #ffb6c1;">Yield</h3>
+
+    <p>🍯It's incredible how the #HEX yield continues to grow quarter after quarter. This is Part 5 of the quarterly report.</p>
+    
+    <p>For HEX staking, the average yield on Ethereum reached 52.31%, while on Pulsechain, it was 35.96%. Excluding stakes with penalties, stakes on Ethereum achieved a new record of 70.28%, while on Pulsechain, it matched last year’s Q4 2023 high of 42.26%.</p>
+    
+    <p><img src="quarter/2024/q3/yield_image.png" alt="Yield Growth"></p>
+    
+    <p>The quarterly APY numbers for eHEX are as follows:</p>
+    <ul>
+        <li>1 Year: 11.05%</li>
+        <li>2 Years: 14.84%</li>
+        <li>3 Years: 21.49%</li>
+        <li>4 Years: 55.49%</li>
+    </ul>
+    <p><img src="quarter/2024/q3/ehex_apys.png" alt="eHEX APY Q3"></p>
+    
+    <p>For pHEX, the quarterly APY numbers are:</p>
+    <ul>
+        <li>1 Year: 10.3%</li>
+        <li>2 Years: 13.87%</li>
+        <li>3 Years: 20.59%</li>
+        <li>4 Years: 53.62%</li>
+    </ul>
+    <p><img src="quarter/2024/q3/phex_apys.png" alt="pHEX APYs"></p>
+
+    <h3 id="penalties" style="color: #ffb6c1;">Penalties</h3>
+    
+    <p>📉 Huge Reduction in #HEX Penalties in Q3: Part 6</p>
+
+    <p>This year, we witnessed several significant whales emergency end staking, particularly in March and April. However, things have since quieted down. In Q3, we returned to a normal level of total penalties, amounting to 336 million HEX. Of this, pHEX accounted for 59% and eHEX for 41%.</p>
+
+    <p><img src="quarter/2024/q3/penalties_total.png" alt="Total Penalties Q3"></p>
+
+    <p>Looking at the proportion of emergency end stakers relative to active stakers, we see a new record low: only 0.31% of all active stakers in pHEX and 0.19% in eHEX chose to emergency end stake. The vast majority are staying calm and happily continuing to stake!</p>
+
+    <p><img src="quarter/2024/q3/penalties_ratio.png" alt="Penalties Ratio"></p>
+
+    <h3 id="5555" style="color: #ffb6c1;">5555</h3>
+    
+    <p>🏆 Q3 was the best quarter yet for 5555 #HEX stakes. This is the final part of the HEX quarterly report.</p>
+
+    <p>We saw 1.6k full-length HEX stakes, of which 84% were pHEX stakes, with the remaining being eHEX. This has been the best quarter of the year so far, though there is still a long way to go to reach previous highs.</p>
+
+    <p><img src="quarter/2024/q3/5555_count.png" alt="5555 Stakes Count"></p>
+
+    <p>A total of 238 million HEX was staked for 15 years across these 1.6k stakes, reflecting strong commitment. For the first time, the pHEX amount surpassed the eHEX amount, with pHEX leading by 16 million—though the split remains close to 50-50.</p>
+
+    <p><img src="quarter/2024/q3/5555_amount.png" alt="5555 Stakes Amount"></p>
+
+    <p>I hope you enjoyed this quarterly report. I'll soon have the October numbers, which are already looking promising.</p>
+
+    <script>
+        document.getElementById('month').addEventListener('click', function() {
+            document.getElementById('month-subnav').style.display = 'flex';
+        });
+
+        document.querySelectorAll('.other-month').forEach(function(element) {
+            element.addEventListener('click', function() {
+                if (this.textContent === 'August') {
+                    window.location.href = '2024-august.html';
+                } else if (this.textContent === 'September') {
+                    window.location.href = '2024-september.html';
+                } else {
+                    alert('No report uploaded yet for this month. Stay tuned!');
+                }
+            });
+        });
+
+        document.querySelectorAll('.quarter-option').forEach(function(element) {
+            element.addEventListener('click', function() {
+                if (this.textContent === 'Q2') {
+                    window.location.href = '2024-q2.html';
+                } else if (this.textContent === 'Q3') {
+                    window.location.href = '2024-q3.html';
+                } else {
+                    alert('No report uploaded yet for this quarter. Stay tuned!');
+                }
+            });
+        });
+
+        document.querySelectorAll('.dropdown-content a').forEach(function(element) {
+            element.addEventListener('click', function() {
+                this.parentElement.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
